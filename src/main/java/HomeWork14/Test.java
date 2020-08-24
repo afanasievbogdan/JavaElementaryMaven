@@ -21,8 +21,24 @@ public class Test {
                 }
             }
         }
-        for (int anInt : ints) {
-            System.out.print(anInt + " ");
+        for (int i : ints) {
+            System.out.print(i + " ");
+        }
+        System.out.println(" ");
+    }
+
+    public static void insertionSort(int[] ints) {
+        for (int i = 1; i < ints.length; i++) {
+            int current = ints[i];
+            int j = i - 1;
+            while(j >= 0 && current < ints[j]) {
+                ints[j+1] = ints[j];
+                j--;
+            }
+            ints[j+1] = current;
+        }
+        for (int i : ints) {
+            System.out.print(i + " ");
         }
         System.out.println(" ");
     }
@@ -53,6 +69,14 @@ public class Test {
 
         fillArray(ints);
         bubbleSort(ints);
+        System.out.print("index = ");
+        binarySearch(ints, 6);
+
+        int[] ints1 = new int[15];
+
+        fillArray(ints);
+        insertionSort(ints);
+        System.out.print("index = ");
         binarySearch(ints, 6);
     }
 }
