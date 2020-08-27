@@ -53,12 +53,11 @@ public class IntegerStream {
         strings1.add("gbgb");
         strings1.add("thrGBGnee");
         strings1.add("gg");
-        strings1.add("rr");
+        strings1.add("rrtt");
         strings1.add("QWE");
 
         strings1.stream()
-                .map(String::toLowerCase)
-                .filter(s -> s.length()<4)
+                .filter(s -> s.length()==4 && s.equals(s.toLowerCase()))
                 .forEach(System.out::println);
 
     }
