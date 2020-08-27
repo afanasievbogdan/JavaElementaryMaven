@@ -44,6 +44,12 @@ public class Test {
     }
 
     public static void binarySearch(int[] ints, int elementValue){
+        for (int i = 0; i < ints.length - 1; i++) {
+            if (ints[i] > ints[i+1]) {
+                System.out.println("array is not sorted");
+                return;
+            }
+        }
         int firstElement = 0;
         int lastElement = ints.length - 1;
         int index = -1;
@@ -78,5 +84,8 @@ public class Test {
         insertionSort(ints);
         System.out.print("index = ");
         binarySearch(ints, 6);
+
+        int[] ints2 = {4,5,6,1,2,3};
+        binarySearch(ints2, 2);
     }
 }
