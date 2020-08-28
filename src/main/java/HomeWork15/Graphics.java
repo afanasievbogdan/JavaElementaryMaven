@@ -1,16 +1,15 @@
 package HomeWork15;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Graphics {
 
-    public String input (){
+    public static String input (){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите число : ");
         String string = scanner.nextLine();
         try {
-            int integer = Integer.parseInt(string);
+            Integer.parseInt(string);
         }catch (NumberFormatException | NullPointerException exception) {
             System.out.println("Неверный символ, вы можете ввести только строку содержащую цифры 0-9");
             return "";
@@ -124,12 +123,7 @@ public class Graphics {
             }
         }
 
-
     public static void main(String[] args) {
-        Graphics graphics = new Graphics();
-
-        String s = graphics.input();
-        printGraphics(s);
-
+        printGraphics(input());
     }
 }
