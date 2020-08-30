@@ -1,0 +1,16 @@
+You have played 5 games, you won 2 times, super smart AI won 1 times, draw was 2 times.
+CONGRATULATION! YOU WON!
+
+You have played 5 games, you won 3 times, super smart AI won 2 times, draw was 0 times.
+CONGRATULATION! YOU WON!
+
+You have played 5 games, you won 2 times, super smart AI won 3 times, draw was 0 times.
+SORRY, THIS TIME YOU LOST
+
+You have played 4 games, you won 1 times, super smart AI won 1 times, draw was 2 times.
+SORRY, THIS TIME YOU LOST
+
+
+You have played 8 games, you won 2 times, super smart AI won 1 times, draw was 5 times.
+CONGRATULATION! YOU WON!
+
