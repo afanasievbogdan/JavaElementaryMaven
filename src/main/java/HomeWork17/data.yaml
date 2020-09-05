@@ -1,0 +1,8 @@
+---
+name: "Bogdan"
+lastName: "Afanasiev"
+student: true
+address:
+  city: "Odessa"
+  street: "Koroleva"
+  index: 65104
