@@ -1,5 +1,8 @@
 package HomeWork19;
 
+import java.util.LinkedList;
+import java.util.List;
+
 class Main{
 
     public static void main(String[] args) {
@@ -17,5 +20,7 @@ class Main{
 
         thread0.start();
         thread1.start();
+
+        List<String> stringList = new LinkedList<>();
     }
 }
