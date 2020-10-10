@@ -1,0 +1,17 @@
+2020-10-11 00:44:58 WARN  Main:110 - The game starts
+2020-10-11 00:44:59 INFO  Main:32 - Player choose 3 games to play
+2020-10-11 00:45:01 INFO  Main:38 - Player shows ROCK
+2020-10-11 00:45:01 INFO  Main:40 - AI shows ROCK
+2020-10-11 00:45:01 INFO  Main:48 - It's a draw
+2020-10-11 00:45:02 INFO  Main:38 - Player shows PAPER
+2020-10-11 00:45:02 INFO  Main:40 - AI shows SCISSORS
+2020-10-11 00:45:02 INFO  Main:58 - User lost
+2020-10-11 00:45:04 INFO  Main:38 - Player shows ROCK
+2020-10-11 00:45:04 INFO  Main:40 - AI shows SCISSORS
+2020-10-11 00:45:04 INFO  Main:53 - User win
+2020-10-11 00:45:04 WARN  Main:78 - Game ends
+2020-10-11 00:45:04 INFO  Main:79 - User played 3 games
+2020-10-11 00:45:04 INFO  Main:80 - 0 games left
+2020-10-11 00:45:04 INFO  Main:81 - Player score = 1
+2020-10-11 00:45:04 INFO  Main:82 - AI score = 1
+2020-10-11 00:45:04 ERROR Main:85 - YOU LOST, AI WON
