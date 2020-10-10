@@ -10,7 +10,54 @@ SORRY, THIS TIME YOU LOST
 You have played 4 games, you won 1 times, super smart AI won 1 times, draw was 2 times.
 SORRY, THIS TIME YOU LOST
 
-
 You have played 8 games, you won 2 times, super smart AI won 1 times, draw was 5 times.
 CONGRATULATION! YOU WON!
+
+You have played 7 games, you won 1 times, super smart AI won 3 times, draw was 3 times.
+SORRY, THIS TIME YOU LOST
+
+You have played 7 games, you won 3 times, super smart AI won 2 times, draw was 2 times.
+CONGRATULATION! YOU WON!
+
+You have played 4 games, you won 2 times, super smart AI won 0 times, draw was 2 times.
+CONGRATULATION! YOU WON!
+
+You have played 7 games, you won 2 times, super smart AI won 1 times, draw was 4 times.
+CONGRATULATION! YOU WON!
+
+You have played 2 games, you won 1 times, super smart AI won 0 times, draw was 1 times.
+CONGRATULATION! YOU WON!
+
+You have played 1 games, you won 1 times, super smart AI won 0 times, draw was 0 times.
+CONGRATULATION! YOU WON!
+
+You have played 1 games, you won 1 times, super smart AI won 0 times, draw was 0 times.
+CONGRATULATION! YOU WON!
+
+You have played 3 games, you won 1 times, super smart AI won 0 times, draw was 2 times.
+CONGRATULATION! YOU WON!
+
+You have played 4 games, you won 0 times, super smart AI won 4 times, draw was 0 times.
+SORRY, THIS TIME YOU LOST
+
+You have played 3 games, you won 0 times, super smart AI won 2 times, draw was 1 times.
+SORRY, THIS TIME YOU LOST
+
+You have played 3 games, you won 1 times, super smart AI won 0 times, draw was 2 times.
+CONGRATULATION! YOU WON!
+
+You have played 3 games, you won 2 times, super smart AI won 1 times, draw was 0 times.
+CONGRATULATION! YOU WON!
+
+You have played 3 games, you won 1 times, super smart AI won 2 times, draw was 0 times.
+SORRY, THIS TIME YOU LOST
+
+You have played 3 games, you won 1 times, super smart AI won 1 times, draw was 1 times.
+SORRY, THIS TIME YOU LOST
+
+You have played 3 games, you won 0 times, super smart AI won 1 times, draw was 2 times.
+SORRY, THIS TIME YOU LOST
+
+You have played 3 games, you won 1 times, super smart AI won 1 times, draw was 1 times.
+SORRY, THIS TIME YOU LOST
 

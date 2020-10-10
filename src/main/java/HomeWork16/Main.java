@@ -1,5 +1,8 @@
 package HomeWork16;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -12,6 +15,8 @@ public class Main {
     private int drawScore;
     private int numOfGames;
 
+    private static final Logger log = LogManager.getLogger(Main.class);
+
     public Main() {
         player = new Player();
         ai = new AI();
@@ -21,12 +26,16 @@ public class Main {
     }
 
     public int startGame(){
-        return player.howMuchGames();
+        int howMuchGames = player.howMuchGames();
+        log.info("Player choose " + howMuchGames + " games to play");
+        return howMuchGames;
     }
 
     public void playGame(int howMuchGames) throws IOException {
         ShowType playerMove = player.showType();
+        log.info("Player shows " + playerMove);
         ShowType aiMove = ai.showType();
+        log.info("AI shows " + aiMove);
 
         if (playerMove != ShowType.BREAK) {
             System.out.println("AI shows " + aiMove + ".");
@@ -34,25 +43,46 @@ public class Main {
         String checkWhoWins = playerMove.checkWhoWins(aiMove);
         switch (checkWhoWins) {
             case "draw":
+                log.info("It's a draw");
                 System.out.println("IT'S A DRAW!\n");
                 drawScore++;
                 break;
             case "win":
+                log.info("User win");
                 System.out.println(playerMove + " beats " + aiMove + ". YOU WIN!\n");
                 playerScore++;
                 break;
             case "lost":
+                log.info("User lost");
                 System.out.println(aiMove + " beats " + playerMove + ". YOU LOST.\n");
                 aiScore++;
                 break;
             case "break":
+                log.warn("User break the game");
+                log.info("User played " + numOfGames + " games");
+                log.info((howMuchGames - numOfGames) + " games left");
+                log.info("Player score = " + playerScore);
+                log.info("AI score = " + aiScore);
+                if (playerScore > aiScore)
+                    log.error("PLAYER WON!");
+                else log.error("YOU LOST, AI WON");
                 saveResultToFile();
                 System.exit(0);
         }
         numOfGames++;
         if (numOfGames != howMuchGames)
             playGame(howMuchGames);
-        else saveResultToFile();
+        else {
+            log.warn("Game ends");
+            log.info("User played " + numOfGames + " games");
+            log.info((howMuchGames - numOfGames) + " games left");
+            log.info("Player score = " + playerScore);
+            log.info("AI score = " + aiScore);
+            if (playerScore > aiScore)
+                log.error("PLAYER WON!");
+            else log.error("YOU LOST, AI WON");
+            saveResultToFile();
+        }
     }
 
     public void saveResultToFile() throws IOException {
@@ -75,6 +105,7 @@ public class Main {
         }
 
     public static void main(String[] args) throws IOException {
+        log.warn("The game starts");
         Main newGame = new Main();
 
         newGame.playGame(newGame.startGame());
