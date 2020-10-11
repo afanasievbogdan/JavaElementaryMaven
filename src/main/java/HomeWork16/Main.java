@@ -6,6 +6,7 @@ import org.apache.log4j.Logger;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ResourceBundle;
 
 public class Main {
     private Player player;
@@ -15,6 +16,7 @@ public class Main {
     private int drawScore;
     private int numOfGames;
 
+    ResourceBundle bundle = ResourceBundle.getBundle("language");
     private static final Logger log = LogManager.getLogger(Main.class);
 
     public Main() {
@@ -23,49 +25,51 @@ public class Main {
         playerScore = 0;
         aiScore = 0;
         numOfGames = 0;
+        log.warn(bundle.getString("log_gameStarts"));
     }
 
     public int startGame(){
         int howMuchGames = player.howMuchGames();
-        log.info("Player choose " + howMuchGames + " games to play");
+        log.info(bundle.getString("log_playerChoose") + howMuchGames + " " + bundle.getString("log_games"));
         return howMuchGames;
     }
 
     public void playGame(int howMuchGames) throws IOException {
         ShowType playerMove = player.showType();
-        log.info("Player shows " + playerMove);
+        log.info(bundle.getString("playerShows") + playerMove);
         ShowType aiMove = ai.showType();
-        log.info("AI shows " + aiMove);
+        log.info(bundle.getString("aiShows") + aiMove);
 
         if (playerMove != ShowType.BREAK) {
-            System.out.println("AI shows " + aiMove + ".");
+            System.out.println(bundle.getString("playerShows") + playerMove + ".");
+            System.out.println(bundle.getString("aiShows") + aiMove + ".");
         }
         String checkWhoWins = playerMove.checkWhoWins(aiMove);
         switch (checkWhoWins) {
             case "draw":
-                log.info("It's a draw");
-                System.out.println("IT'S A DRAW!\n");
+                log.info(bundle.getString("log_draw"));
+                System.out.println(bundle.getString("draw") + "\n");
                 drawScore++;
                 break;
             case "win":
-                log.info("User win");
-                System.out.println(playerMove + " beats " + aiMove + ". YOU WIN!\n");
+                log.info(bundle.getString("log_win"));
+                System.out.println(playerMove + " " + bundle.getString("beats") + " " + aiMove + "." + bundle.getString("win") + "\n");
                 playerScore++;
                 break;
             case "lost":
-                log.info("User lost");
-                System.out.println(aiMove + " beats " + playerMove + ". YOU LOST.\n");
+                log.info(bundle.getString("log_lost"));
+                System.out.println(aiMove + " " + bundle.getString("beats") + " " + playerMove + "." + bundle.getString("lost") + "\n");
                 aiScore++;
                 break;
             case "break":
-                log.warn("User break the game");
-                log.info("User played " + numOfGames + " games");
-                log.info((howMuchGames - numOfGames) + " games left");
-                log.info("Player score = " + playerScore);
-                log.info("AI score = " + aiScore);
+                log.warn(bundle.getString("log_break"));
+                log.info(bundle.getString("log_gamesPlayed") + numOfGames + bundle.getString("log_gamesPlayed2"));
+                log.info((howMuchGames - numOfGames) + bundle.getString("log_gamesLeft"));
+                log.info(bundle.getString("log_playerScore") + playerScore);
+                log.info(bundle.getString("log_aiScore") + aiScore);
                 if (playerScore > aiScore)
-                    log.error("PLAYER WON!");
-                else log.error("YOU LOST, AI WON");
+                    log.error(bundle.getString("log_playerWon"));
+                else log.error(bundle.getString("log_aiWon"));
                 saveResultToFile();
                 System.exit(0);
         }
@@ -73,39 +77,38 @@ public class Main {
         if (numOfGames != howMuchGames)
             playGame(howMuchGames);
         else {
-            log.warn("Game ends");
-            log.info("User played " + numOfGames + " games");
-            log.info((howMuchGames - numOfGames) + " games left");
-            log.info("Player score = " + playerScore);
-            log.info("AI score = " + aiScore);
+            log.warn(bundle.getString("log_gameEnds"));
+            log.info(bundle.getString("log_gamesPlayed") + numOfGames + bundle.getString("log_gamesPlayed2"));
+            log.info((howMuchGames - numOfGames) + bundle.getString("log_gamesLeft"));
+            log.info(bundle.getString("log_playerScore") + playerScore);
+            log.info(bundle.getString("log_aiScore") + aiScore);
             if (playerScore > aiScore)
-                log.error("PLAYER WON!");
-            else log.error("YOU LOST, AI WON");
+                log.error(bundle.getString("log_playerWon"));
+            else log.error(bundle.getString("log_aiWon"));
             saveResultToFile();
         }
     }
 
     public void saveResultToFile() throws IOException {
-        System.out.printf("You have played %d games, you won %d times, super smart AI won %d times, draw was %d times.\n", numOfGames, playerScore, aiScore, drawScore);
+        System.out.printf(bundle.getString("result") + "\n", numOfGames, playerScore, aiScore, drawScore);
         if (playerScore > aiScore)
-            System.out.println("CONGRATULATION! YOU WIN!");
-        else System.out.println("SORRY, THIS TIME YOU LOST");
+            System.out.println(bundle.getString("congrats"));
+        else System.out.println(bundle.getString("sorry"));
 
-        System.out.println("\nResults has saved to file!");
+        System.out.println(bundle.getString("saveToFile"));
 
         FileWriter fileWriter = new FileWriter("C:/Users/MSI/IdeaProjects/JavaElementaryMaven/src/main/java/HomeWork16/file.txt", true);
         PrintWriter printWriter = new PrintWriter(fileWriter);
 
-        printWriter.printf("You have played %d games, you won %d times, super smart AI won %d times, draw was %d times.\n", numOfGames, playerScore, aiScore, drawScore);
+        printWriter.printf(bundle.getString("result"), numOfGames, playerScore, aiScore, drawScore);
         if (playerScore > aiScore)
-            printWriter.print("CONGRATULATION! YOU WON!");
-        else printWriter.print("SORRY, THIS TIME YOU LOST");
+            printWriter.print(bundle.getString("congrats"));
+        else printWriter.print(bundle.getString("sorry"));
         printWriter.print("\n\n");
         printWriter.close();
         }
 
     public static void main(String[] args) throws IOException {
-        log.warn("The game starts");
         Main newGame = new Main();
 
         newGame.playGame(newGame.startGame());

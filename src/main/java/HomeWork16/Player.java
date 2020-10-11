@@ -1,6 +1,7 @@
 package HomeWork16;
 
 import java.util.InputMismatchException;
+import java.util.ResourceBundle;
 import java.util.Scanner;
 
 public class Player {
@@ -8,8 +9,10 @@ public class Player {
     private Scanner howMuchGamesInput;
     private Scanner moveTypeInput;
 
+    ResourceBundle bundle = ResourceBundle.getBundle("language");
+
     public int howMuchGames() {
-        System.out.println("How much games you want to play?");
+        System.out.println(bundle.getString("howMuchGames"));
         boolean success = false;
         while (!success) {
             try {
@@ -18,14 +21,14 @@ public class Player {
                 return howMuchGamesInput.nextInt();
             } catch (InputMismatchException exception) {
                 success = false;
-                System.out.println("Wrong input");
+                System.out.println(bundle.getString("wrongInput"));
             }
         }
         return howMuchGamesInput.nextInt();
     }
 
     public ShowType showType(){
-        System.out.println("What you want to show \"PAPER\", \"ROCK\" or \"SCISSORS\"? If you want to end a game type \"BREAK\"");
+        System.out.println(bundle.getString("playerShow"));
         moveTypeInput = new Scanner(System.in);
         String input = moveTypeInput.nextLine();
         switch (input) {
@@ -38,7 +41,7 @@ public class Player {
             case "BREAK":
                 return ShowType.BREAK;
             default:
-                System.out.println("Wrong input");
+                System.out.println(bundle.getString("wrongInput"));
                 return showType();
         }
     }

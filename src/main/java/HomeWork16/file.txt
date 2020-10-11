@@ -61,3 +61,12 @@ SORRY, THIS TIME YOU LOST
 You have played 3 games, you won 1 times, super smart AI won 1 times, draw was 1 times.
 SORRY, THIS TIME YOU LOST
 
+You have played 4 games, you won 2 times, super smart AI won 1 times, draw was 1 times.
+CONGRATULATION! YOU WON!
+
+Вы сыграли 2 игр, вы выиграли 1 раз, супер умный ИИ выиграл 1 раз, ничья была 0 раз.ИЗВИНИТЕ, В ЭТОТ РАЗ ВЫ ПРОИГРАЛИ
+
+Вы сыграли 3 игр, вы выиграли 2 раз, супер умный ИИ выиграл 0 раз, ничья была 1 раз.ПОЗДРАВЛЯЕМ! ТЫ ПОБЕДИЛ!
+
+Вы сыграли 5 игр, вы выиграли 2 раз, супер умный ИИ выиграл 1 раз, ничья была 2 раз.ПОЗДРАВЛЯЕМ! ТЫ ПОБЕДИЛ!
+

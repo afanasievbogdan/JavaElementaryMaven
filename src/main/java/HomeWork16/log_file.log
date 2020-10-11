@@ -1,17 +1,23 @@
-2020-10-11 00:44:58 WARN  Main:110 - The game starts
-2020-10-11 00:44:59 INFO  Main:32 - Player choose 3 games to play
-2020-10-11 00:45:01 INFO  Main:38 - Player shows ROCK
-2020-10-11 00:45:01 INFO  Main:40 - AI shows ROCK
-2020-10-11 00:45:01 INFO  Main:48 - It's a draw
-2020-10-11 00:45:02 INFO  Main:38 - Player shows PAPER
-2020-10-11 00:45:02 INFO  Main:40 - AI shows SCISSORS
-2020-10-11 00:45:02 INFO  Main:58 - User lost
-2020-10-11 00:45:04 INFO  Main:38 - Player shows ROCK
-2020-10-11 00:45:04 INFO  Main:40 - AI shows SCISSORS
-2020-10-11 00:45:04 INFO  Main:53 - User win
-2020-10-11 00:45:04 WARN  Main:78 - Game ends
-2020-10-11 00:45:04 INFO  Main:79 - User played 3 games
-2020-10-11 00:45:04 INFO  Main:80 - 0 games left
-2020-10-11 00:45:04 INFO  Main:81 - Player score = 1
-2020-10-11 00:45:04 INFO  Main:82 - AI score = 1
-2020-10-11 00:45:04 ERROR Main:85 - YOU LOST, AI WON
+2020-10-11 14:57:26 WARN  Main:28 - Игра начинается
+2020-10-11 14:57:28 INFO  Main:33 - Игрок выбирает 5 игр чтобы сыграть
+2020-10-11 14:57:32 INFO  Main:39 - Игрок показывает SCISSORS
+2020-10-11 14:57:32 INFO  Main:41 - Компьютер показывает SCISSORS
+2020-10-11 14:57:32 INFO  Main:50 - НИЧЬЯ
+2020-10-11 14:57:37 INFO  Main:39 - Игрок показывает ROCK
+2020-10-11 14:57:37 INFO  Main:41 - Компьютер показывает ROCK
+2020-10-11 14:57:37 INFO  Main:50 - НИЧЬЯ
+2020-10-11 14:57:42 INFO  Main:39 - Игрок показывает ROCK
+2020-10-11 14:57:42 INFO  Main:41 - Компьютер показывает PAPER
+2020-10-11 14:57:42 INFO  Main:60 - Игрок проиграл
+2020-10-11 14:58:29 INFO  Main:39 - Игрок показывает PAPER
+2020-10-11 14:58:29 INFO  Main:41 - Компьютер показывает ROCK
+2020-10-11 14:58:29 INFO  Main:55 - Победа игрока
+2020-10-11 14:58:34 INFO  Main:39 - Игрок показывает PAPER
+2020-10-11 14:58:34 INFO  Main:41 - Компьютер показывает ROCK
+2020-10-11 14:58:34 INFO  Main:55 - Победа игрока
+2020-10-11 14:58:34 WARN  Main:80 - Игра окончена
+2020-10-11 14:58:34 INFO  Main:81 - Игрок сыграл5игр
+2020-10-11 14:58:34 INFO  Main:82 - 0игр осталось
+2020-10-11 14:58:34 INFO  Main:83 - Счет игрока =2
+2020-10-11 14:58:34 INFO  Main:84 - Счет ИИ =1
+2020-10-11 14:58:34 ERROR Main:86 - ИГРОК ВЫИГРАЛ!
