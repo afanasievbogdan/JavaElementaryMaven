@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping xmlns="http://www.hibernate.org/xsd/hibernate-mapping">
+
+    <class name="HomeWork23.Student" table="students">
+        <id name="studentId" column="studentID"/>
+        <property name="fullName" column="fullName"/>
+        <property name="admissionYear" column="admissionYear"/>
+        <property name="groupId" column="groupID"/>
+    </class>
+</hibernate-mapping>
